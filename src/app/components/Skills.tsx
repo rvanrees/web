@@ -30,8 +30,8 @@ const Skills = () => {
             <a href="/api/skills" className="hover:underline transition">
               /api/skills
             </a>
-            <span className="ml-2 text-xs text-chalk animate-pulse">
-              fetching...
+            <span className="ml-2 text-xs text-chalk animate-pulse font-mono">
+              fetching
             </span>
           </p>
         ) : (
