@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 // For loading state
 const placeholder = [...Array(3)];
+const lag = 1200;
 
 const Skills = () => {
   const [skills, setSkills] = useState<Skill[]>([]);
@@ -17,7 +18,7 @@ const Skills = () => {
           setSkills(data.skills);
           setLoading(false);
         });
-    }, 1200);
+    }, lag);
   }, []);
 
   return (
@@ -39,7 +40,9 @@ const Skills = () => {
             <a href="/api/skills" className="hover:underline transition">
               /api/skills
             </a>
-            <span className="ml-2 text-xs text-chalk">1.2ms</span>
+            <span className="ml-2 text-xs text-chalk font-mono">{`${
+              lag / 1000
+            }ms`}</span>
           </p>
         )}
         <h2 className="text-3xl font-bold tracking-tight text-white">
