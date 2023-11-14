@@ -24,7 +24,7 @@ const Navbar = () => {
             target="_blank"
             className="text-xs font-semibold leading-6 text-chalk hover:text-secondary transition"
           >
-            Version {packageJson.version}
+            rvanrees/web v{packageJson.version}
           </a>
         </div>
       </div>

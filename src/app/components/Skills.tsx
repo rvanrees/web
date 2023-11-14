@@ -17,7 +17,7 @@ const Skills = () => {
           setSkills(data.skills);
           setLoading(false);
         });
-    }, 2500);
+    }, 1200);
   }, []);
 
   return (
@@ -39,7 +39,7 @@ const Skills = () => {
             <a href="/api/skills" className="hover:underline transition">
               /api/skills
             </a>
-            <span className="ml-2 text-xs text-chalk">2.5ms</span>
+            <span className="ml-2 text-xs text-chalk">1.2ms</span>
           </p>
         )}
         <h2 className="text-3xl font-bold tracking-tight text-white">
