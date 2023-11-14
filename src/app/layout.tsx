@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
@@ -19,7 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="bg-slate-50 dark:bg-charcoal">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
