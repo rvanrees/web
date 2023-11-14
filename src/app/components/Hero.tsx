@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 const greetings: Greeting[] = [
@@ -10,8 +13,14 @@ const greetings: Greeting[] = [
 ];
 
 const Hero = () => {
-  const greeting: Greeting =
-    greetings[Math.floor(Math.random() * greetings.length)];
+  const [greeting, setGreeting] = useState<Greeting>({
+    text: "Hello, world!",
+    language: "EN",
+  });
+
+  useEffect(() => {
+    setGreeting(greetings[Math.floor(Math.random() * greetings.length)]);
+  }, []);
 
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
@@ -19,7 +28,7 @@ const Hero = () => {
         <p className="leading-7 text-secondary">
           &rarr;{` git commit -m "${greeting.text}"`}
           <span className="ml-2 text-xs text-chalk">
-            {uuidv4().slice(0, 8)} - {greeting.language}
+            {uuidv4().slice(0, 6)}
           </span>
         </p>
         <h2 className="text-4xl font-bold tracking-tight sm:text-6xl text-white">
