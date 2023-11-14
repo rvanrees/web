@@ -26,7 +26,7 @@ const Skills = () => {
           ],
           icon: (
             <ArrowsRightLeftIcon
-              className="h-6 w-6 text-secondary mr-2 mt-2"
+              className="h-6 w-6 text-secondary dark:text-darcondary mr-2 mt-2"
               aria-hidden="true"
             />
           ),
@@ -40,7 +40,7 @@ const Skills = () => {
           ],
           icon: (
             <LanguageIcon
-              className="h-6 w-6 text-secondary mr-2 mt-2"
+              className="h-6 w-6 text-secondary dark:text-darcondary mr-2 mt-2"
               aria-hidden="true"
             />
           ),
@@ -53,7 +53,7 @@ const Skills = () => {
           ],
           icon: (
             <ChartBarIcon
-              className="h-6 w-6 text-secondary mr-2 mt-2"
+              className="h-6 w-6 text-secondary dark:text-darcondary mr-2 mt-2"
               aria-hidden="true"
             />
           ),
@@ -65,10 +65,10 @@ const Skills = () => {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
       <div className="mx-auto max-w-2xl lg:max-w-4xl">
-        <p className="leading-7 text-secondary">
+        <p className="leading-7 text-secondary dark:text-darcondary">
           &rarr; git pull origin skills
         </p>
-        <h2 className="text-3xl font-bold tracking-tight text-white">
+        <h2 className="text-3xl font-bold tracking-tight text-charcoal dark:text-white">
           Lorem ipsum dolor sit amet
         </h2>
         <div className="mt-4 mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3 pt-4">
@@ -100,7 +100,7 @@ const Skills = () => {
                   <div className="group relative">
                     <div className="flex flex-row">
                       {s.icon}
-                      <h3 className="mt-2 text-lg font-semibold leading-6 text-white">
+                      <h3 className="mt-2 text-lg font-semibold leading-6 text-charcoal dark:text-white">
                         {s.title}
                       </h3>
                     </div>
