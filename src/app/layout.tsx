@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="bg-slate-50 dark:bg-charcoal">
+    <html lang="en" className="bg-charcoal">
       <body className={font.className}>
         {children}
         <Analytics />

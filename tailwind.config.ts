@@ -11,8 +11,7 @@ const config: Config = {
     colors: {
       charcoal: "#101820",
       chalk: "#7d8590",
-      secondary: "#ef4444",
-      darcondary: "#FEE715",
+      secondary: "#FEE715",
       green: colors.green,
       white: colors.white,
       black: colors.black,
@@ -21,6 +20,6 @@ const config: Config = {
     },
   },
   plugins: [require("@tailwindcss/forms")],
-  darkMode: "media", // media & class
+  darkMode: "class", // media & class
 };
 export default config;

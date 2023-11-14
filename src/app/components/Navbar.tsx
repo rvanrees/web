@@ -2,7 +2,7 @@ import packageJson from "../../../package.json";
 
 const Navbar = () => {
   return (
-    <nav className="border-b border-black/10 dark:border-white/10 mb-0 sm:mb-4">
+    <nav className="border-b border-white/10 mb-0 sm:mb-4">
       <div className="max-w-2xl lg:max-w-4xl flex flex-row justify-between mx-auto py-4 lg:px-0 md:px-0 px-4">
         <a
           href="/"
@@ -22,7 +22,7 @@ const Navbar = () => {
           <a
             href="https://github.com/rvanrees/web"
             target="_blank"
-            className="text-xs font-semibold leading-6 text-chalk hover:text-secondary dark:hover:text-darcondary transition"
+            className="text-xs font-semibold leading-6 text-chalk hover:text-secondary transition"
           >
             Version {packageJson.version}
           </a>
