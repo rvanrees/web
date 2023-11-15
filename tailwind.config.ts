@@ -16,6 +16,7 @@ const config: Config = {
       white: colors.white,
       black: colors.black,
       slate: colors.slate,
+      gray: colors.gray,
       transparent: colors.transparent,
     },
   },

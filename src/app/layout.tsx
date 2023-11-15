@@ -19,7 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="bg-charcoal">
+    <html
+      lang="en"
+      className="bg-gradient-to-bl from-charcoal via-gray-800 to-gray-700"
+    >
       <body className={font.className}>
         {children}
         <Analytics />
