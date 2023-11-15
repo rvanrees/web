@@ -14,7 +14,7 @@ const Quote = () => {
           <a
             href="https://en.wikipedia.org/wiki/Susan_Wojcicki"
             target="_blank"
-            className="mt-1 italic text-xs text-chalk font-normal hover:text-secondary transition"
+            className="mt-1 font-mono text-xs text-chalk font-normal hover:text-secondary transition"
           >
             Susan Wojcicki
           </a>

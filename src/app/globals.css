@@ -11,3 +11,19 @@
   color: #101820;
   background: #fee715;
 }
+
+.animate-fader {
+  -webkit-animation: fader 4.1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  -moz-animation: fader 4.1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation: fader 4.1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes fader {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
