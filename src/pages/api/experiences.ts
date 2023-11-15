@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 type ResponseData = {
-  skills: Skill[];
+  experiences: Experience[];
 };
 
 export default function handler(
@@ -9,7 +9,7 @@ export default function handler(
   res: NextApiResponse<ResponseData>
 ) {
   res.status(200).json({
-    skills: [
+    experiences: [
       {
         id: 1,
         title: "Software Development",

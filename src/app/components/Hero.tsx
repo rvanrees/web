@@ -17,9 +17,13 @@ const Hero = () => {
           &rarr; git commit -m "Hello, world!"
           <span className="ml-2 text-xs text-chalk font-mono">{tag}</span>
         </p>
-        <h2 className="text-5xl font-bold tracking-tight sm:text-6xl text-white">
-          Hello, World!
-        </h2>
+        <h1 className="text-5xl font-bold tracking-tight sm:text-6xl text-white">
+          I'm{" "}
+          <a href="mailto:rvanrees@icloud.com" className="hover:underline">
+            Rutger
+          </a>{" "}
+          👋
+        </h1>
         <p className="mt-4 text-lg leading-8 text-chalk mb-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.

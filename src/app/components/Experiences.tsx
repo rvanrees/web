@@ -6,16 +6,16 @@ import { useEffect, useState } from "react";
 const placeholder = [...Array(3)];
 const lag = 1200;
 
-const Skills = () => {
-  const [skills, setSkills] = useState<Skill[]>([]);
+const Experiences = () => {
+  const [experiences, setExpierences] = useState<Experience[]>([]);
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     setInterval(() => {
-      fetch("/api/skills")
+      fetch("/api/experiences")
         .then((res) => res.json())
         .then((data) => {
-          setSkills(data.skills);
+          setExpierences(data.experiences);
           setLoading(false);
         });
     }, lag);
@@ -27,8 +27,8 @@ const Skills = () => {
         {isLoading ? (
           <p className="leading-7 text-secondary">
             &rarr; GET{" "}
-            <a href="/api/skills" className="hover:underline transition">
-              /api/skills
+            <a href="/api/experiences" className="hover:underline transition">
+              /api/experiences
             </a>
             <span className="ml-2 text-xs text-chalk animate-pulse font-mono">
               fetching&hellip;
@@ -37,8 +37,8 @@ const Skills = () => {
         ) : (
           <p className="leading-7 text-secondary">
             &rarr; GET{" "}
-            <a href="/api/skills" className="hover:underline transition">
-              /api/skills
+            <a href="/api/experiences" className="hover:underline transition">
+              /api/experiences
             </a>
             <span className="ml-2 text-xs text-chalk font-mono">{`${
               lag / 1000
@@ -46,7 +46,7 @@ const Skills = () => {
           </p>
         )}
         <h2 className="text-3xl font-bold tracking-tight text-white">
-          Lorem ipsum dolor sit amet
+          I am familiar with this
         </h2>
         <div className="mt-2 mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3 pt-4">
           {isLoading
@@ -67,15 +67,15 @@ const Skills = () => {
                   </div>
                 </article>
               ))
-            : skills.map((s: Skill) => (
+            : experiences.map((e: Experience) => (
                 <article
-                  key={s.id}
+                  key={e.id}
                   className="flex max-w-xl flex-col items-start"
                 >
                   <div className="group relative">
                     <div className="flex flex-row">
                       <h3 className="mt-2 text-lg font-semibold leading-6 text-white">
-                        {s.title}
+                        {e.title}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
@@ -90,7 +90,7 @@ const Skills = () => {
                         </svg>
                       </h3>
                     </div>
-                    {s.content.map((p: string) => (
+                    {e.content.map((p: string) => (
                       <p className="mt-2 text-sm font-normal leading-6 text-chalk">
                         {p}
                       </p>
@@ -104,4 +104,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default Experiences;
