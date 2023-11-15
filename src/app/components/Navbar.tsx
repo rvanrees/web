@@ -4,7 +4,7 @@ const Navbar = () => {
       <div className="max-w-2xl lg:max-w-4xl flex flex-row justify-between mx-auto py-4 lg:px-0 md:px-0 px-4">
         <a
           href="/"
-          className="text-xl font-normal leading-9 tracking-tight text-secondary flex flex-row border rounded-full border-2 border-charcoal hover:border-secondary transition"
+          className="text-xl font-normal leading-9 tracking-tight text-secondary flex flex-row border rounded-full"
         >
           <img
             className="mx-auto h-10 w-10 rounded-full"
