@@ -46,7 +46,7 @@ const Experiences = () => {
           </p>
         )}
         <h2 className="text-3xl font-bold tracking-tight text-white">
-          I am familiar with this
+          I do have experience with
         </h2>
         <div className="mt-2 mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3 pt-4">
           {isLoading
