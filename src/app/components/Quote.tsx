@@ -6,7 +6,7 @@ const Quote = () => {
           <p>
             “From phones to cars to medicine, technology touches every part of
             our lives. If you can create technology, you can{" "}
-            <span className="bg-secondary px-2 text-charcoal text-2xl sm:text-3xl">
+            <span className="bg-secondary px-2 pb-1 text-charcoal text-2xl sm:text-3xl">
               change
             </span>{" "}
             the world.”
