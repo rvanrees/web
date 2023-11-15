@@ -14,7 +14,7 @@ const Hero = () => {
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
       <div className="mx-auto max-w-2xl lg:max-w-4xl">
         <p className="leading-7 text-secondary">
-          &rarr;{` git commit -m "Hello, world!"`}
+          &rarr; git commit -m "Hello, world!"
           <span className="ml-2 text-xs text-chalk font-mono">{tag}</span>
         </p>
         <h2 className="text-5xl font-bold tracking-tight sm:text-6xl text-white">

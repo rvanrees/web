@@ -1,16 +1,18 @@
+import packageJson from "../../../package.json";
+
 const Footer = () => {
   return (
     <div className="mx-auto max-w-2xl lg:max-w-4xl px-4 sm:px-6 lg:px-8 pb-4">
       <div className="flex flex-row justify-between border-t border-white/10 py-2">
         <div className="mt-1.5">
-          <p className="text-xs font-normal text-chalk">
+          <p className="text-xs text-chalk">
             <a
               href="https://rutgervanrees.nl"
-              className="font-bold text-white hover:text-secondary transition mr-1"
+              className="font-bold text-white hover:text-secondary transition mr-2"
             >
-              Rutger van Rees
+              Rutgervanrees.nl
             </a>
-            &bull; {new Date().getFullYear()}
+            <span className="font-mono">v{packageJson.version}</span>
           </p>
         </div>
         <div className="hidden lg:block p-x-4"></div>

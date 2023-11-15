@@ -1,5 +1,3 @@
-import packageJson from "../../../package.json";
-
 const Navbar = () => {
   return (
     <nav className="border-b border-white/10 mb-0 sm:mb-4">
@@ -22,9 +20,9 @@ const Navbar = () => {
           <a
             href="https://github.com/rvanrees/web"
             target="_blank"
-            className="text-xs font-semibold leading-6 text-chalk hover:text-secondary transition"
+            className="text-xs leading-6 text-chalk font-mono hover:text-secondary transition"
           >
-            rvanrees/web v{packageJson.version}
+            rvanrees/web
           </a>
         </div>
       </div>

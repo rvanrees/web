@@ -31,7 +31,7 @@ const Skills = () => {
               /api/skills
             </a>
             <span className="ml-2 text-xs text-chalk animate-pulse font-mono">
-              fetching
+              fetching&hellip;
             </span>
           </p>
         ) : (
