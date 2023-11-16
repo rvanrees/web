@@ -2,14 +2,14 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Quote from "./components/Quote";
-import Expierences from "./components/Experiences";
+import Expierence from "./components/Experience";
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <Hero />
-      <Expierences />
+      <Expierence />
       <Quote />
       <Footer />
     </>

@@ -6,16 +6,16 @@ import { useEffect, useState } from "react";
 const placeholder: number[] = [1, 2, 3];
 const lag: number = 1200;
 
-const Experiences = () => {
-  const [experiences, setExpierences] = useState<Experience[]>([]);
+const Experience = () => {
+  const [experience, setExpierence] = useState<Experience[]>([]);
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     setInterval(() => {
-      fetch("/api/experiences")
+      fetch("/api/experience")
         .then((res) => res.json())
         .then((data) => {
-          setExpierences(data.experiences);
+          setExpierence(data.experience);
           setLoading(false);
         });
     }, lag);
@@ -28,7 +28,7 @@ const Experiences = () => {
           <p className="leading-7 text-secondary">
             &rarr; GET{" "}
             <a href="/api/experiences" className="hover:underline transition">
-              /api/experiences
+              /api/experience
             </a>
             <span className="ml-2 text-xs text-chalk animate-pulse font-mono">
               fetching&hellip;
@@ -38,7 +38,7 @@ const Experiences = () => {
           <p className="leading-7 text-secondary">
             &rarr; GET{" "}
             <a href="/api/experiences" className="hover:underline transition">
-              /api/experiences
+              /api/experience
             </a>
             <span className="ml-2 text-xs text-chalk font-mono">{`${
               lag / 1000
@@ -61,7 +61,7 @@ const Experiences = () => {
                 >
                   <div className="group relative">
                     <div className="flex flex-row">
-                      <p className="mt-2 text-lg font-semibold leading-6 rounded bg-slate-700 h-6 w-32"></p>
+                      <p className="mt-4 text-lg font-semibold leading-6 rounded bg-slate-700 h-8 w-48"></p>
                     </div>
                     <p className="mt-2 text-sm font-normal rounded leading-6 bg-slate-700 h-4 w-64"></p>
                     <p className="mt-2 text-sm font-normal rounded leading-6 bg-slate-700 h-4 w-48"></p>
@@ -71,27 +71,23 @@ const Experiences = () => {
                   </div>
                 </article>
               ))
-            : experiences.map((e: Experience) => (
+            : experience.map((e: Experience) => (
                 <article
                   key={e.id}
                   className="flex max-w-xl flex-col items-start"
                 >
-                  <div className="flex flex-row">
-                    <h3 className="mt-2 text-lg font-semibold leading-6 text-white">
-                      {e.title}
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        className="w-6 h-6 -mt-0.5 ml-1 text-secondary inline"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </h3>
+                  <h3 className="mt-2 text-lg font-semibold leading-6 text-white">
+                    {e.title}
+                  </h3>
+                  <div className="flex flex-row w-full">
+                    <div className="mt-2 w-6/12 bg-slate-700 rounded-full h-2.5 mb-2">
+                      <div
+                        className={`bg-secondary h-2.5 rounded-full ${e.level}`}
+                      ></div>
+                    </div>
+                    <p className="ml-2 text-xs text-chalk font-mono mt-1.5">
+                      {e.value}% XP
+                    </p>
                   </div>
                   {e.content.map((p: string, i: number) => (
                     <p
@@ -109,4 +105,4 @@ const Experiences = () => {
   );
 };
 
-export default Experiences;
+export default Experience;
