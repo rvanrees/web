@@ -11,7 +11,7 @@ const Experience = () => {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    setInterval(() => {
+    setTimeout(() => {
       fetch("/api/experience")
         .then((res) => res.json())
         .then((data) => {
