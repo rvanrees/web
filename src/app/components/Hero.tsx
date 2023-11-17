@@ -19,14 +19,18 @@ const Hero = () => {
         </p>
         <h1 className="text-5xl font-bold tracking-tight sm:text-6xl text-white">
           I'm{" "}
-          <a href="mailto:rvanrees@icloud.com" className="hover:underline">
+          <a
+            href="mailto:rvanrees@icloud.com"
+            className="hover:underline font-serif"
+          >
             Rutger
           </a>{" "}
           👋
         </h1>
         <p className="mt-4 text-lg leading-8 text-chalk mb-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          An enthusiast with a strong background in software development and
+          data analytics, combining my love for technology with hands-on
+          experience to drive innovative solutions and insights.
         </p>
       </div>
     </div>

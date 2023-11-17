@@ -49,7 +49,7 @@ const Experience = () => {
           {isLoading ? (
             <div className="my-2 text-lg font-semibold leading-6 rounded bg-slate-700 h-8 w-64 animate-pulse"></div>
           ) : (
-            "Lorem ipsun dolor sit amet"
+            "This is within my area of expertise"
           )}
         </h2>
         <div className="mt-2 mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3 pt-4">
@@ -76,7 +76,7 @@ const Experience = () => {
                   key={e.id}
                   className="flex max-w-xl flex-col items-start"
                 >
-                  <h3 className="mt-2 text-lg font-semibold leading-6 text-white">
+                  <h3 className="mt-0 text-lg font-semibold leading-6 text-white">
                     {e.title}
                   </h3>
                   <div className="flex flex-row w-full">
@@ -89,14 +89,12 @@ const Experience = () => {
                       {e.value}% XP
                     </p>
                   </div>
-                  {e.content.map((p: string, i: number) => (
-                    <p
-                      key={i}
-                      className="mt-2 text-sm font-normal leading-6 text-chalk"
-                    >
-                      {p}
-                    </p>
-                  ))}
+                  <p
+                    className="mt-2 text-sm font-normal text-chalk leading-6 first-letter:text-5xl first-letter:font-bold first-letter:text-white
+                      first-letter:mr-2  first-letter:float-left first-letter:font-serif"
+                  >
+                    {e.content}
+                  </p>
                 </article>
               ))}
         </div>

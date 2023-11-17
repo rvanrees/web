@@ -3,5 +3,5 @@ interface Experience {
   title: string;
   value: number;
   level: string;
-  content: string[];
+  content: string;
 }
