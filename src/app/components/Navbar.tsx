@@ -8,7 +8,7 @@ const Navbar = () => {
         >
           <img
             className="mx-auto h-10 w-10 rounded-full"
-            src="https://media.licdn.com/dms/image/D4D03AQG3-dLeWIEHtA/profile-displayphoto-shrink_400_400/0/1694679073383?e=1704931200&v=beta&t=4vfcphJK6WvGpffJN3y13Yuwfylk25T6Ya-gTm8IJAM"
+            src="/me.jpg"
             alt="Rutger van Rees"
           />
         </a>
