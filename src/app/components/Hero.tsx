@@ -34,14 +34,12 @@ const Hero = () => {
         </p>
         <div className="flex mb-4">
           <div className="relative rounded-full px-3 py-1 text-xs text-chalk ring-1 ring-chalk/25 hover:ring-chalk transition hover:text-white sm:text-sm">
-            ✨ I've started exploring the world of photography{" — "}
             <a
               href="https://www.pexels.com/@rutger-van-rees-2147548108/"
               target="_blank"
-              className="font-semibold text-secondary"
+              className=""
             >
-              <span aria-hidden="true" className="absolute inset-0" />
-              Check it out!
+              ✨ I've started exploring the world of photography!
             </a>
           </div>
         </div>
