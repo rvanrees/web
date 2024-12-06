@@ -32,6 +32,14 @@ const Hero = () => {
           data analytics, combining my love for technology with hands-on
           experience to drive innovative solutions and insights.
         </p>
+        <a
+          href="https://www.pexels.com/@rutger-van-rees-2147548108/"
+          className="mt-4 text-lg leading-8 text-chalk hover:text-secondary transition"
+          target="_blank"
+        >
+          ✨ I've also started exploring the world of photography — Check it
+          out!
+        </a>
       </div>
     </div>
   );
