@@ -32,14 +32,19 @@ const Hero = () => {
           data analytics, combining my love for technology with hands-on
           experience to drive innovative solutions and insights.
         </p>
-        <a
-          href="https://www.pexels.com/@rutger-van-rees-2147548108/"
-          className="mt-4 text-lg leading-8 text-chalk hover:text-secondary transition"
-          target="_blank"
-        >
-          ✨ I've also started exploring the world of photography — Check it
-          out!
-        </a>
+        <div className="flex mb-4">
+          <div className="relative rounded-full px-3 py-1 text-xs text-chalk ring-1 ring-chalk/25 hover:ring-chalk transition hover:text-white sm:text-sm">
+            ✨ I've started exploring the world of photography{" — "}
+            <a
+              href="https://www.pexels.com/@rutger-van-rees-2147548108/"
+              target="_blank"
+              className="font-semibold text-secondary"
+            >
+              <span aria-hidden="true" className="absolute inset-0" />
+              Check it out!
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
