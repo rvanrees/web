@@ -1,7 +1,7 @@
 const Portfolio = () => {
   return (
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-8">
-      <div className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:grid-rows-2 sm:gap-x-6 lg:gap-8">
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-16 w-full">
+      <div className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-6 lg:gap-8">
         <div className="group relative aspect-[2/1] overflow-hidden rounded-lg sm:row-span-2 sm:aspect-square hidden sm:flex">
           <img
             alt="Hello, world! I'm Rutger 👋"
