@@ -19,16 +19,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="relative">
+    <html lang="en" className="relative bg-charcoal">
       <body className={font.className}>
-        <div className="absolute inset-0 bg-cover bg-center">
-          <img
-            src="/img.jpg"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
-        <div className="absolute inset-0 bg-charcoal bg-opacity-95"></div>
-        <div className="relative">{children}</div>
+        {children}
         <Analytics />
       </body>
     </html>
