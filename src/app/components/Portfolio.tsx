@@ -43,13 +43,9 @@ const Portfolio = () => {
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-8">
       <div className="mx-auto max-w-2xl lg:max-w-4xl">
         <p className="leading-7 text-secondary">
-          &rarr; SELECT
-          <span className="ml-2 font-mono text-chalk text-sm">* </span>
-          FROM{" "}
-          <span className="ml-2 font-mono text-chalk text-sm">photos </span>
-          WHERE
-          <span className="ml-2 font-mono text-chalk text-sm">
-            featured = 1;
+          &rarr; Showcase
+          <span className="ml-2 font-mono text-chalk text-xs">
+            SELECT * FROM pictures;
           </span>
         </p>
         <div className="flex mt-2">
