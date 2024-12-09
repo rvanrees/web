@@ -1,3 +1,4 @@
+import { Experience } from "@/app/types/Model";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 type ResponseData = {
