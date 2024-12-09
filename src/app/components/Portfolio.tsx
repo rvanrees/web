@@ -43,18 +43,23 @@ const Portfolio = () => {
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-8">
       <div className="mx-auto max-w-2xl lg:max-w-4xl">
         <p className="leading-7 text-secondary">
-          &rarr; Say Cheese!
-          <span className="ml-2 text-xs text-chalk font-mono">*Click*</span>
+          &rarr; SELECT
+          <span className="ml-2 font-mono text-chalk text-sm">* </span>
+          FROM{" "}
+          <span className="ml-2 font-mono text-chalk text-sm">photos </span>
+          WHERE
+          <span className="ml-2 font-mono text-chalk text-sm">
+            featured = 1;
+          </span>
         </p>
         <div className="flex mt-2">
-          <div className="relative rounded-lg px-3 py-1 text-x ring-1 ring-chalk/25 hover:ring-chalk transition text-chalk hover:text-white sm:text-sm">
-            <a
-              href="https://www.pexels.com/@rutger-van-rees-2147548108/"
-              target="_blank"
-            >
-              ✨ I've started exploring the world of photography!
-            </a>
-          </div>
+          <a
+            className="relative rounded-lg px-3 py-1 ring-1 ring-chalk/25 hover:ring-chalk transition text-chalk hover:text-white text-xs sm:text-sm"
+            href="https://www.pexels.com/@rutger-van-rees-2147548108/"
+            target="_blank"
+          >
+            ✨ I've started exploring the world of photography!
+          </a>
         </div>
         <div className="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2 mt-4">
           {isLoading ? (

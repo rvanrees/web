@@ -16,7 +16,7 @@ const Quote = () => {
             target="_blank"
             className="mt-1 font-mono text-xs text-chalk font-normal hover:text-secondary transition"
           >
-            Susan Wojcicki
+            — Susan Wojcicki
           </a>
         </blockquote>
       </figure>
