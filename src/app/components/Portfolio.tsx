@@ -19,33 +19,23 @@ const Portfolio = () => {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-8">
       <div className="mx-auto max-w-2xl lg:max-w-4xl">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2">
           {pictures.map((p) => (
-            <div key={p.id} className="group relative">
-              <div className="relative">
-                <img
-                  alt={p.name}
-                  src={p.imageSrc}
-                  className="object-cover w-full rounded-lg bg-gray-100"
-                />
+            <figure
+              key={p.id}
+              className="relative transition-all duration-300 cursor-pointer hover:opacity-75"
+            >
+              <a href={p.href} target="_blank">
                 <div
                   aria-hidden="true"
-                  className="absolute inset-0 flex items-end p-4 opacity-0 group-hover:opacity-100"
-                >
-                  <div className="w-full rounded-md bg-white/50 px-4 py-2 text-center text-sm font-semibold text-charcoal backdrop-blur backdrop-filter">
-                    Download
-                  </div>
-                </div>
-              </div>
-              <div className="mt-2 flex items-center justify-between space-x-8 text-base font-medium text-white">
-                <h3>
-                  <a href={p.href} target="_blank">
-                    <span aria-hidden="true" className="absolute inset-0" />
-                    {p.name}
-                  </a>
-                </h3>
-              </div>
-            </div>
+                  className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50 rounded-lg"
+                />
+                <img className="rounded-lg" src={p.imageSrc} alt={p.name} />
+              </a>
+              <figcaption className="absolute px-3 text-md font-semibold text-white bottom-2">
+                <p>{p.name}</p>
+              </figcaption>
+            </figure>
           ))}
         </div>
       </div>
