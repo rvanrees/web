@@ -33,7 +33,7 @@ const Hero = () => {
           experience to drive innovative solutions and insights.
         </p>
         <div className="flex">
-          <div className="relative rounded-full px-3 py-1 text-xs text-chalk ring-1 ring-chalk/25 hover:ring-chalk transition hover:text-white sm:text-sm">
+          <div className="relative rounded-lg px-3 py-1 text-xs text-chalk ring-1 ring-chalk/25 hover:ring-chalk transition hover:text-white sm:text-sm">
             <a
               href="https://www.pexels.com/@rutger-van-rees-2147548108/"
               target="_blank"
