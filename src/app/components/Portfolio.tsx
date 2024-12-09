@@ -48,16 +48,10 @@ const Portfolio = () => {
             SELECT * FROM pictures;
           </span>
         </p>
-        <div className="flex mt-2">
-          <a
-            className="relative rounded-lg px-3 py-1 ring-1 ring-chalk/25 hover:ring-chalk transition text-chalk hover:text-white text-xs sm:text-sm"
-            href="https://www.pexels.com/@rutger-van-rees-2147548108/"
-            target="_blank"
-          >
-            ✨ I've started exploring the world of photography!
-          </a>
-        </div>
-        <div className="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2 mt-4">
+        <h2 className="text-3xl font-bold tracking-tight text-white">
+          I've started exploring the world of photography
+        </h2>
+        <div className="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2 mt-6">
           {isLoading ? (
             placeholder.map((p: number) => (
               <article
