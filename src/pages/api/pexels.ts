@@ -4,7 +4,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const API_KEY = process.env.NEXT_PUBLIC_PEXELS || "";
+  const API_KEY = process.env.NEXT_PUBLIC_PEXELS;
   const { collectionId } = req.query;
 
   try {
