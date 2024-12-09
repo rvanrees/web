@@ -9,6 +9,7 @@ interface Photo {
     medium: string;
   };
   alt: string;
+  photographer: string;
 }
 
 const Portfolio = () => {
@@ -57,12 +58,12 @@ const Portfolio = () => {
               {photos.map((p) => (
                 <figure
                   key={p.id}
-                  className="relative transition-all duration-300 cursor-pointer hover:opacity-75"
+                  className="relative transition-all duration-300 cursor-pointer"
                 >
                   <a href={p.url} target="_blank">
                     <div
                       aria-hidden="true"
-                      className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50 rounded-lg"
+                      className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50 rounded-lg hover:opacity-75 transition"
                     />
                     <img
                       className="rounded-lg"
@@ -72,6 +73,9 @@ const Portfolio = () => {
                   </a>
                   <figcaption className="absolute px-3 text-md font-semibold text-white bottom-2">
                     <p>{p.alt}</p>
+                    <p className="text-chalk font-normal text-sm">
+                      {p.photographer}
+                    </p>
                   </figcaption>
                 </figure>
               ))}

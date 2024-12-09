@@ -4,22 +4,32 @@ import { useEffect, useState } from "react";
 
 // For loading state
 const placeholder: number[] = [1, 2, 3];
-const lag: number = 1200;
+
+const randomNumber = (min: number, max: number) => {
+  return Math.random() * (max - min) + min;
+};
 
 const Experience = () => {
   const [experience, setExpierence] = useState<Experience[]>([]);
   const [isLoading, setLoading] = useState(true);
+  const [lag, setLag] = useState<number | null>(null);
 
   useEffect(() => {
-    setTimeout(() => {
-      fetch("/api/experience")
-        .then((res) => res.json())
-        .then((data) => {
-          setExpierence(data.experience);
-          setLoading(false);
-        });
-    }, lag);
+    setLag(randomNumber(100, 1000));
   }, []);
+
+  useEffect(() => {
+    if (lag !== null) {
+      setTimeout(() => {
+        fetch("/api/experience")
+          .then((res) => res.json())
+          .then((data) => {
+            setExpierence(data.experience);
+            setLoading(false);
+          });
+      }, lag);
+    }
+  }, [lag]);
 
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
@@ -40,9 +50,9 @@ const Experience = () => {
             <a href="/api/experiences" className="hover:underline transition">
               /api/experience
             </a>
-            <span className="ml-2 text-xs text-chalk font-mono">{`${
-              lag / 1000
-            }ms`}</span>
+            <span className="ml-2 text-xs text-chalk font-mono">{`${lag?.toFixed(
+              0
+            )}ms`}</span>
           </p>
         )}
         <h2 className="text-3xl font-bold tracking-tight text-white">
