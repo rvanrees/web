@@ -4,7 +4,6 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const API_KEY = process.env.NEXT_PUBLIC_PEXELS;
   const { collectionId } = req.query;
 
   try {
@@ -12,7 +11,8 @@ export default async function handler(
       `https://api.pexels.com/v1/collections/${collectionId}`,
       {
         headers: {
-          Authorization: API_KEY,
+          Authorization:
+            "BA8xP8Exrf335PLbyYG8Q84L8Qfj52rjIaKRpIMpxdpgoLlnH8Od3ZHd",
         },
       }
     );
