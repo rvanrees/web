@@ -2,8 +2,9 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Quote from "./components/Quote";
-import Expierence from "./components/Experience";
+import Expierences from "./components/Experiences";
 import Portfolio from "./components/Portfolio";
+import Commits from "./components/Commits";
 
 export default function Home() {
   return (
@@ -22,8 +23,9 @@ export default function Home() {
       </div>
       <Navbar />
       <Hero />
+      <Expierences />
+      <Commits />
       <Portfolio />
-      <Expierence />
       <Quote />
       <Footer />
       <div

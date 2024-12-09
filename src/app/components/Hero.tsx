@@ -1,21 +1,10 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
-
 const Hero = () => {
-  const [tag, setTag] = useState<string>("");
-
-  useEffect(() => {
-    setTag(uuidv4().slice(0, 6));
-  }, []);
-
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
       <div className="mx-auto max-w-2xl lg:max-w-4xl">
         <p className="leading-7 text-secondary">
-          &rarr; git commit -m "Hello, world!"
-          <span className="ml-2 text-xs text-chalk font-mono">{tag}</span>
+          &rarr; Goei'n dag!
+          <span className="ml-2 text-xs text-chalk font-mono">/wave</span>
         </p>
         <h1 className="text-5xl font-bold tracking-tight sm:text-6xl text-white">
           I'm{" "}
@@ -33,7 +22,7 @@ const Hero = () => {
           experience to drive innovative solutions and insights — trusted by
           leading brands.
         </p>
-        <div className="flex mb-8">
+        <div className="flex">
           <img
             alt="Google"
             src="/google.png"

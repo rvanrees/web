@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Experience } from "../types/Model";
 
 // For loading state
 const placeholder: number[] = [1, 2, 3];
@@ -9,7 +10,7 @@ const randomNumber = (min: number, max: number) => {
   return Math.random() * (max - min) + min;
 };
 
-const Experience = () => {
+const Experiences = () => {
   const [experience, setExpierence] = useState<Experience[]>([]);
   const [isLoading, setLoading] = useState(true);
   const [lag, setLag] = useState<number | null>(null);
@@ -32,7 +33,7 @@ const Experience = () => {
   }, [lag]);
 
   return (
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
       <div className="mx-auto max-w-2xl lg:max-w-4xl">
         {isLoading ? (
           <p className="leading-7 text-secondary">
@@ -113,4 +114,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Experiences;

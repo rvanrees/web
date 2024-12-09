@@ -1,15 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-interface Photo {
-  id: number;
-  url: string;
-  src: {
-    medium: string;
-  };
-  alt: string;
-}
+import { Photo } from "../types/Model";
 
 const Portfolio = () => {
   const [photos, setPhotos] = useState<Photo[]>([]);
@@ -40,7 +32,7 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-8">
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
       <div className="mx-auto max-w-2xl lg:max-w-4xl">
         <p className="leading-7 text-secondary">
           &rarr; Showcase

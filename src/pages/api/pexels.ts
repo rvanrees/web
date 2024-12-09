@@ -4,7 +4,9 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const PEXELS_KEY = process.env.NEXT_PUBLIC_PEXELS_KEY || "";
+  const PEXELS_KEY =
+    process.env.NEXT_PUBLIC_PEXELS_KEY ||
+    "BA8xP8Exrf335PLbyYG8Q84L8Qfj52rjIaKRpIMpxdpgoLlnH8Od3ZHd";
   const { collectionId } = req.query;
 
   try {

@@ -10,7 +10,7 @@ const font = Open_Sans({
 
 export const metadata: Metadata = {
   title: "Rutger van Rees",
-  description: 'git commit -m "Hello, world!"',
+  description: "Goei'n dag! /wave 👋",
 };
 
 export default function RootLayout({
