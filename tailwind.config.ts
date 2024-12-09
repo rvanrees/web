@@ -11,7 +11,7 @@ const config: Config = {
     colors: {
       charcoal: "#101820",
       chalk: "#7d8590",
-      secondary: "#FEE715",
+      secondary: "#f9ca24",
       green: colors.green,
       white: colors.white,
       black: colors.black,

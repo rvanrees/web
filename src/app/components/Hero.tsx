@@ -30,17 +30,25 @@ const Hero = () => {
         <p className="mt-4 text-lg leading-8 text-chalk mb-4">
           An enthusiast with a strong background in software development and
           data analytics, combining my love for technology with hands-on
-          experience to drive innovative solutions and insights.
+          experience to drive innovative solutions and insights — trusted by
+          leading brands.
         </p>
-        <div className="flex">
-          <div className="relative rounded-lg px-3 py-1 text-xs text-chalk ring-1 ring-chalk/25 hover:ring-chalk transition hover:text-white sm:text-sm">
-            <a
-              href="https://www.pexels.com/@rutger-van-rees-2147548108/"
-              target="_blank"
-            >
-              ✨ I've started exploring the world of photography!
-            </a>
-          </div>
+        <div className="flex mb-8">
+          <img
+            alt="Google"
+            src="/google.png"
+            className="max-h-24 opacity-25 w-full object-contain sm:object-left hover:opacity-100 transition invert"
+          />
+          <img
+            alt="Talpa"
+            src="/talpa.png"
+            className="max-h-24 opacity-25 w-full object-contain sm:object-left hover:opacity-100 transition invert"
+          />
+          <img
+            alt="AVRO TROS"
+            src="/avro.png"
+            className="max-h-24 opacity-25 w-full object-contain sm:object-left hover:opacity-100 transition invert"
+          />
         </div>
       </div>
     </div>

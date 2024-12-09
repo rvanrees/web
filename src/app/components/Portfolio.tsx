@@ -9,7 +9,6 @@ interface Photo {
     medium: string;
   };
   alt: string;
-  photographer: string;
 }
 
 const Portfolio = () => {
@@ -43,7 +42,21 @@ const Portfolio = () => {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-8">
       <div className="mx-auto max-w-2xl lg:max-w-4xl">
-        <div className="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2">
+        <p className="leading-7 text-secondary">
+          &rarr; Say Cheese!
+          <span className="ml-2 text-xs text-chalk font-mono">*Click*</span>
+        </p>
+        <div className="flex mt-2">
+          <div className="relative rounded-lg px-3 py-1 text-x ring-1 ring-chalk/25 hover:ring-chalk transition text-chalk hover:text-white sm:text-sm">
+            <a
+              href="https://www.pexels.com/@rutger-van-rees-2147548108/"
+              target="_blank"
+            >
+              ✨ I've started exploring the world of photography!
+            </a>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2 mt-4">
           {isLoading ? (
             placeholder.map((p: number) => (
               <article
@@ -73,9 +86,6 @@ const Portfolio = () => {
                   </a>
                   <figcaption className="absolute px-3 text-md font-semibold text-white bottom-2">
                     <p>{p.alt}</p>
-                    <p className="text-chalk font-normal text-sm">
-                      {p.photographer}
-                    </p>
                   </figcaption>
                 </figure>
               ))}
