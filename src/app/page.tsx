@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -6,8 +10,14 @@ import Expierences from "./components/Experiences";
 import Portfolio from "./components/Portfolio";
 
 export default function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setIsVisible(true), 500);
+  }, []);
+
   return (
-    <section className="min-h-fit bg-charcoal relative isolate transition">
+    <section className="min-h-fit bg-charcoal relative isolate">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -20,12 +30,14 @@ export default function Home() {
           className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#0ea5e9] to-[#2a0050] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
         />
       </div>
-      <Navbar />
-      <Hero />
-      <Expierences />
-      <Portfolio />
-      <Quote />
-      <Footer />
+      <div className={`${isVisible ? "animate-fadeIn" : "opacity-0"}`}>
+        <Navbar />
+        <Hero />
+        <Expierences />
+        <Portfolio />
+        <Quote />
+        <Footer />
+      </div>
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-[calc(100%-30rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-40rem)]"

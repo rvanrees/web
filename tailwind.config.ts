@@ -18,8 +18,19 @@ const config: Config = {
       slate: colors.slate,
       transparent: colors.transparent,
     },
+    extend: {
+      animation: {
+        fadeIn: "fadeIn 1s ease-out",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "100" },
+        },
+      },
+    },
   },
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [require("@tailwindcss/forms"), require("tailwindcss-animate")],
   darkMode: "class", // media & class
 };
 export default config;

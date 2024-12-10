@@ -13,14 +13,14 @@ const randomNumber = (min: number, max: number) => {
 const Experiences = () => {
   const [experience, setExpierence] = useState<Experience[]>([]);
   const [isLoading, setLoading] = useState(true);
-  const [lag, setLag] = useState<number | null>(null);
+  const [lag, setLag] = useState<number>(0);
 
   useEffect(() => {
-    setLag(randomNumber(100, 1000));
+    setLag(randomNumber(500, 1500));
   }, []);
 
   useEffect(() => {
-    if (lag !== null) {
+    if (lag !== 0) {
       setTimeout(() => {
         fetch("/api/experience")
           .then((res) => res.json())
@@ -51,9 +51,9 @@ const Experiences = () => {
             <a href="/api/experiences" className="hover:underline transition">
               /api/experience
             </a>
-            <span className="ml-2 text-xs text-chalk font-mono">{`${lag?.toFixed(
-              0
-            )}ms`}</span>
+            <span className="ml-2 text-xs text-chalk font-mono">{`${(
+              lag - 500
+            ).toFixed(0)}ms`}</span>
           </p>
         )}
         <h2 className="text-3xl font-bold tracking-tight text-white">

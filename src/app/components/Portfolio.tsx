@@ -3,12 +3,14 @@
 import { useEffect, useState } from "react";
 import { Photo } from "../types/Model";
 
+const COLUMNS: string = "2";
+
 const Portfolio = () => {
   const [photos, setPhotos] = useState<Photo[]>([]);
   const [isLoading, setLoading] = useState(true);
 
   // For loading state
-  const placeholder: number[] = [1, 2];
+  const placeholder: number[] = [1, 2, 3];
 
   const fetchPhotos = async () => {
     try {
@@ -43,14 +45,14 @@ const Portfolio = () => {
         <h2 className="text-3xl font-bold tracking-tight text-white">
           I've started exploring the world of photography
         </h2>
-        <div className="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2 mt-6">
+        <div className="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-3 mt-6">
           {isLoading ? (
             placeholder.map((p: number) => (
               <article
                 key={p}
                 className="flex max-w-xl flex-col items-start animate-pulse"
               >
-                <p className="text-sm font-normal rounded-lg leading-6 bg-slate-700 h-72 w-full"></p>
+                <p className="text-sm font-normal rounded-lg leading-6 bg-slate-700 h-48 w-full"></p>
               </article>
             ))
           ) : (
