@@ -4,7 +4,6 @@ import Hero from "./components/Hero";
 import Quote from "./components/Quote";
 import Expierences from "./components/Experiences";
 import Portfolio from "./components/Portfolio";
-import Commits from "./components/Commits";
 
 export default function Home() {
   return (
@@ -24,7 +23,6 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Expierences />
-      <Commits />
       <Portfolio />
       <Quote />
       <Footer />

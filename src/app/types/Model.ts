@@ -14,13 +14,3 @@ export interface Photo {
   };
   alt: string;
 }
-
-export interface Commit {
-  sha: string;
-  commit: {
-    message: string;
-    author: {
-      date: string;
-    };
-  };
-}
