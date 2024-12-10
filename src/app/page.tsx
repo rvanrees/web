@@ -8,6 +8,7 @@ import Hero from "./components/Hero";
 import Quote from "./components/Quote";
 import Expierences from "./components/Experiences";
 import Portfolio from "./components/Portfolio";
+import Noaiber from "./components/Noaiber";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,6 +34,7 @@ export default function Home() {
       <div className={`${isVisible ? "animate-fadeIn" : "opacity-0"}`}>
         <Navbar />
         <Hero />
+        <Noaiber />
         <Expierences />
         <Portfolio />
         <Quote />
