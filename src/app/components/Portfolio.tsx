@@ -60,7 +60,7 @@ const Portfolio = () => {
               {photos.map((p) => (
                 <figure
                   key={p.id}
-                  className="relative transition-all duration-300 cursor-pointer"
+                  className="relative transition-all duration-300 cursor-pointer animate-fadeIn"
                 >
                   <a href={p.url} target="_blank">
                     <div

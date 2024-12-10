@@ -16,7 +16,7 @@ const Experiences = () => {
   const [lag, setLag] = useState<number>(0);
 
   useEffect(() => {
-    setLag(randomNumber(500, 1500));
+    setLag(randomNumber(1000, 2000));
   }, []);
 
   useEffect(() => {
@@ -46,7 +46,7 @@ const Experiences = () => {
             </span>
           </p>
         ) : (
-          <p className="leading-7 text-secondary">
+          <p className="leading-7 text-secondary animate-fadeIn">
             &rarr; GET{" "}
             <a href="/api/experiences" className="hover:underline transition">
               /api/experience
@@ -85,7 +85,7 @@ const Experiences = () => {
             : experience.map((e: Experience) => (
                 <article
                   key={e.id}
-                  className="flex max-w-xl flex-col items-start"
+                  className="flex max-w-xl flex-col items-start animate-fadeIn"
                 >
                   <h3 className="mt-0 text-lg font-semibold leading-6 text-white">
                     {e.title}
