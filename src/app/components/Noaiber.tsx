@@ -54,13 +54,18 @@ const Noaiber = () => {
               generic models, no ordinary boundaries—this is a creation that
               challenges conventions and reimagines possibilities.
             </p>
-            <a
-              href="https://chatgpt.com/g/g-675832d93a64819186f6c60a76ca52db-noaiber"
-              target="_blank"
-              className="text-sm font-semibold text-secondary hover:underline"
-            >
-              Give it a try!
-            </a>
+            <div className="flex justify-left">
+              <div className="relative rounded-full px-3 py-1 text-sm transition ring-1 ring-chalk/50 hover:ring-white mt-2">
+                <a
+                  href="https://chatgpt.com/g/g-675832d93a64819186f6c60a76ca52db-noaiber"
+                  target="_blank"
+                  className="font-semibold text-secondary transition"
+                >
+                  <span aria-hidden="true" className="absolute inset-0" />
+                  Give it a try <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
