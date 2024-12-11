@@ -1,24 +1,11 @@
-import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/20/solid";
-
-const people = [
-  {
-    name: "Jane Cooper",
-    title: "Regional Paradigm Technician",
-    role: "Admin",
-    email: "janecooper@example.com",
-    telephone: "+1-202-555-0170",
-    imageUrl:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-  },
-  // More people...
-];
+import { ChatBubbleLeftRightIcon } from "@heroicons/react/20/solid";
 
 const Noaiber = () => {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
       <div className="mx-auto max-w-2xl lg:max-w-4xl">
         <p className="leading-7 text-secondary">
-          &rarr; Custom GPT
+          &rarr; Kiek, 'n AI die plat kan proaten!
           <span className="ml-2 font-mono text-chalk text-xs">
             powered by{" "}
             <a href="https://openai.com" className="hover:underline">
@@ -55,14 +42,14 @@ const Noaiber = () => {
               challenges conventions and reimagines possibilities.
             </p>
             <div className="flex justify-left">
-              <div className="relative rounded-full px-3 py-1 text-sm transition ring-1 ring-chalk/50 hover:ring-white mt-2">
+              <div className="relative rounded-full px-3 py-1 text-sm transition ring-1 ring-chalk/50 hover:ring-white mt-2 group group-hover:text-white text-chalk">
                 <a
                   href="https://chatgpt.com/g/g-675832d93a64819186f6c60a76ca52db-noaiber"
                   target="_blank"
-                  className="font-semibold text-secondary transition"
+                  className="font-semibold flex items-center text-secondary transition"
                 >
-                  <span aria-hidden="true" className="absolute inset-0" />
-                  Give it a try <span aria-hidden="true">&rarr;</span>
+                  <ChatBubbleLeftRightIcon className="w-5 mr-2 group-hover:text-white text-chalk transition" />
+                  Give it a try!
                 </a>
               </div>
             </div>
