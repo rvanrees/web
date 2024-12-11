@@ -7,7 +7,7 @@ const Noaiber = () => {
         <p className="leading-7 text-secondary">
           &rarr; Kiek, 'n AI die plat kan proaten!
           <span className="ml-2 font-mono text-chalk text-xs">
-            powered by{" "}
+            ft.{" "}
             <a href="https://openai.com" className="hover:underline">
               OpenAI
             </a>
